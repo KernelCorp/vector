@@ -5,10 +5,11 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+gem 'mysql2', '0.3.11'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
-
+gem 'activeadmin'
+gem 'meta_search', '>= 1.1.0.pre'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,6 +24,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
