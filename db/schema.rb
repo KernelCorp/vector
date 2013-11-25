@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131125100337) do
+ActiveRecord::Schema.define(:version => 20131125114737) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(:version => 20131125100337) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
-  create_table "lamps", :force => true do |t|
+  create_table "categories", :force => true do |t|
     t.string   "name",        :null => false
     t.string   "slug",        :null => false
     t.text     "description"
@@ -54,6 +54,23 @@ ActiveRecord::Schema.define(:version => 20131125100337) do
     t.datetime "updated_at",  :null => false
   end
 
-  add_index "lamps", ["slug"], :name => "index_lamps_on_slug", :unique => true
+  add_index "categories", ["slug"], :name => "index_categories_on_slug", :unique => true
+
+  create_table "lamps", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "name"
+    t.text     "description"
+    t.string   "price"
+    t.string   "light_on_file_name"
+    t.string   "light_on_content_type"
+    t.integer  "light_on_file_size"
+    t.datetime "light_on_updated_at"
+    t.string   "light_off_file_name"
+    t.string   "light_off_content_type"
+    t.integer  "light_off_file_size"
+    t.datetime "light_off_updated_at"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+  end
 
 end

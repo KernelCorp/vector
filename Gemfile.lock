@@ -49,6 +49,10 @@ GEM
       sass (>= 3.2.0)
       thor
     builder (3.0.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.3)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -102,6 +106,11 @@ GEM
     mysql2 (0.3.11)
     mysql2 (0.3.11-x86-mingw32)
     orm_adapter (0.5.0)
+    paperclip (3.5.2)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -173,6 +182,7 @@ DEPENDENCIES
   jquery-ui-rails
   meta_search (>= 1.1.0.pre)
   mysql2 (= 0.3.11)
+  paperclip
   rails (= 3.2.13)
   russian
   sass-rails (~> 3.2.3)

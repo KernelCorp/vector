@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
+gem 'paperclip'
 
 gem 'russian'
 gem 'friendly_id', '~> 4.0.10'
