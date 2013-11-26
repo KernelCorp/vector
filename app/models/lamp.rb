@@ -1,6 +1,6 @@
 class Lamp < ActiveRecord::Base
 
-  attr_accessible :description, :name, :price, :category_id
+  attr_accessible :description, :name, :price, :category_id, :light_on, :light_off
 
   belongs_to :category
 
