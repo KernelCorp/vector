@@ -6,10 +6,3 @@ one:
   redirect: MyString
   meta_title: MyString
   meta_desc: MyText
-
-two:
-  name: MyString
-  slug: MyString
-  redirect: MyString
-  meta_title: MyString
-  meta_desc: MyText

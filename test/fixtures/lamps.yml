@@ -4,8 +4,3 @@ one:
   name: MyString
   description: MyText
   price: MyString
-
-two:
-  name: MyString
-  description: MyText
-  price: MyString

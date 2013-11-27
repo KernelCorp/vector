@@ -1,0 +1,12 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+with_template:
+  id: 1
+  title: test_1
+  template_name: color_gallery
+
+without_template:
+  id: 2
+  title: test_2
+  template_name: ''
+
