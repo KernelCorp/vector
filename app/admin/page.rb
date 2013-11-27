@@ -1,6 +1,7 @@
 ActiveAdmin.register Page do
 
-  config.filters = false
+  filter :name
+  filter :content
 
   index do
     column :id

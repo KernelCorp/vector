@@ -1,6 +1,7 @@
 ActiveAdmin.register Lamp do
 
-  config.filters = false
+  filter :category, as: :select
+  filter :name
 
   index do
     column :id
