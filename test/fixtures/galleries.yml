@@ -8,5 +8,4 @@ with_template:
 without_template:
   id: 2
   title: test_2
-  template_name: ''
 

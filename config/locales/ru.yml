@@ -1,0 +1,64 @@
+ru:
+
+  activerecord:
+    models:
+      admin_user:
+        zero: "Администраторов"
+        one: "Администратор"
+        few: "Администратора"
+        many: "Администраторы"
+        other: "Администраторов"
+      lamp:
+        zero: "Светильников"
+        one: "Светильник"
+        few: "Светильника"
+        many: "Светильники"
+        other: "Светильников"
+      page:
+        zero: "Страниц"
+        one: "Страница"
+        few: "Страницы"
+        many: "Страницы"
+        other: "Страниц"
+
+    attributes:
+      admin_user:
+        email: "Email"
+        current_sign_in_at: "Вошел в систему"
+        last_sign_in_at: "Последний раз заходил"
+        sign_in_count: "Счетчик входов"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+      lamp:
+        id: "ID"
+        category_id: "Категория"
+        name: "Название"
+        price: "Цена"
+        description: "Описание"
+        light_on: "Фото вкл."
+        light_off: "Фото выкл."
+      page:
+        id: "ID"
+        page_id: "Родительская страница"
+        name: "Название"
+        content: "Контент"
+        redirect: "Перенаправление"
+        meta_title: "Мета-заголовок"
+        meta_desc: "Мета-описание"
+
+  devise:
+    failure:
+      admin_user:
+        unauthenticated: 'Войдите для получения доступа к правам администратора.'
+        unconfirmed: 'Подтвердите вашу регистрацию.'
+        locked: 'Ваш аккаунт заблокирован.'
+        invalid: 'Неправильное имя пользователя или пароль.'
+        invalid_token: 'Неправильная авторизация.'
+        timeout: 'Сессия истекла. Пожалуйста, выполните повторный вход для продолжения.'
+        inactive: 'Ваш аккаунт не активирован.'
+        not_found_in_database: 'Пользователя с таким Email не существует.'
+    sessions:
+      admin_user:
+        signed_in: "Вы успешно вошли."
+        signed_out: "Вы вышли из под аккаунта."
+

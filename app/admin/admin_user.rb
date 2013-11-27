@@ -1,13 +1,24 @@
-ActiveAdmin.register AdminUser do     
+ActiveAdmin.register AdminUser do
+
+  filter :email
+
   index do                            
     column :email                     
     column :current_sign_in_at        
     column :last_sign_in_at           
     column :sign_in_count             
     default_actions                   
-  end                                 
+  end
 
-  filter :email                       
+  show do
+    attributes_table do
+      row :id
+      row :email
+      row :current_sign_in_at
+      row :last_sign_in_at
+      row :sign_in_count
+    end
+  end
 
   form do |f|                         
     f.inputs "Admin Details" do       

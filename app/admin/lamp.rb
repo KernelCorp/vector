@@ -3,6 +3,10 @@ ActiveAdmin.register Lamp do
   config.filters = false
 
   index do
+    column :id
+    column :category_id do |lamp|
+      lamp.category.name
+    end
     column :name
     column :price
     column :light_on do |lamp|
@@ -16,6 +20,10 @@ ActiveAdmin.register Lamp do
 
   show do
     attributes_table do
+      row :id
+      row :category_id do |lamp|
+        lamp.category.name
+      end
       row :name
       row :description
       row :price
