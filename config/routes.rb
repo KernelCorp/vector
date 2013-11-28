@@ -2,6 +2,8 @@ Vector::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  root to: 'main_page#index'
+
   resource :pages, only: [:show], path: 'pages'
 
   resource :galleries, only: [:show]
