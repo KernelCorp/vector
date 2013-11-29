@@ -18,6 +18,8 @@ gem 'friendly_id', '~> 4.0.10'
 gem 'haml-rails'
 
 
+gem 'activeadmin_images'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

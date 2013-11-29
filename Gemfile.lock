@@ -25,6 +25,8 @@ GEM
       meta_search (~> 1.0)
       rails (>= 3.0.0, < 4)
       sass (~> 3.1)
+    activeadmin_images (0.0.1)
+      rails (~> 3.2.13)
     activemodel (3.2.13)
       activesupport (= 3.2.13)
       builder (~> 3.0.0)
@@ -60,7 +62,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    devise (3.2.1)
+    devise (3.2.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -182,6 +184,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  activeadmin_images
   coffee-rails (~> 3.2.1)
   friendly_id (~> 4.0.10)
   haml-rails
