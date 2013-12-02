@@ -13,10 +13,4 @@
       #menu_container
         = render partial: '/menu'
       #content_container
-        #content_block
-          #side_menu
-            #side_menu_pic
-              =yield :side_menu_image
-            .side_menu_item{id: 'side-1'}
-            .side_menu_item{id: 'side-2'}
-            .side_menu_item{id: 'side-3'}
+        = yield
