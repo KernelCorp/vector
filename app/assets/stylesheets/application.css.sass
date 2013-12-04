@@ -5,13 +5,13 @@
 
 html
   min-height: 100%
+  font-family: Segoe UI
 
   body
     background: #1c0408
     margin: 0
 
     #document-wrapper
-      width: 880px
       margin: 0 auto
 
       #menu_container
@@ -19,3 +19,54 @@ html
 
       #content_container
         width: 100%
+
+        #content_block
+          background: #ffffff
+
+          #side_menu
+            display: inline-block
+            vertical-align: top
+            a
+              position: absolute
+              display: block
+              height: 100%
+              width: 100%
+            #side_menu_pic
+              background-size: cover
+
+            .side_menu_item
+              position: relative
+              height: 80px
+              .side_menu_text
+                text-decoration: none
+                color: #ffffff
+                font:
+                  size: 30px
+                  weight: bold
+                line-height: 1
+                margin-left: 15px
+                margin-right: 15px
+            #side-red
+              background: #801429
+            #side-yellow
+              background: #aba00a
+            #side-brown
+              background: #442b1a
+
+          #right_block
+            display: inline-block
+            height: 100%
+
+
+.red
+  #side_menu_pic
+    background-image: url(/images/main-1.png)
+.yellow
+  #side_menu_pic
+    background-image: url(/images/main-3.png)
+.brown
+  #side_menu_pic
+    background-image: url(/images/main-2.png)
+
+
+

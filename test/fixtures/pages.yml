@@ -6,3 +6,35 @@ one:
   redirect: MyString
   meta_title: MyString
   meta_desc: MyText
+
+without_parent_1:
+  name: wp1
+  slug: wp1
+  meta_title: wp1
+  meta_desc: wp1
+  color: red
+
+without_parent_2:
+  name: wp2
+  slug: wp2
+  meta_title: wp2
+  meta_desc: wp2
+  color: red
+
+with_parent_but_without_color:
+  name: wwp2
+  slug: wwp2
+  meta_title: wwp2
+  meta_desc: wwp2
+  parent: without_parent_2
+
+with_parent_and_with_color:
+  name: wwwp2
+  slug: wwwwp2
+  meta_title: wwwp2
+  meta_desc: wwwp2
+  parent: without_parent_2
+  color: black
+
+
+

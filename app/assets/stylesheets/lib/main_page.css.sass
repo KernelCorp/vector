@@ -1,37 +1,44 @@
-.main_column
-  width: 280px
-  height: 450px
+.main_col
+  position: relative
   display: inline-block
   vertical-align: top
   a
-    text-decoration: none
-    font-family: Segoe
+    position: absolute
+    height: 100%
+    width: 100%
+  .main_col_pic
+    background-size: cover
 
-#first_column
+#main_col_red
   background: #801429
-#second_column
+  #main_pic_red
+    background-image: url(/images/main-red.png)
+#main_col_brown
   background: #442b1a
-#third_column
+  #main_pic_brown
+    background-image: url(/images/main-brown.png)
+#main_col_yellow
   background: #aba00a
+  #main_pic_yellow
+    background-image: url(/images/main-yellow.png)
+
 .main_separator
-
   display: inline-block
-  width: 12px
 
-.main_column_title
+.main_col_title
   margin-top: 5px
   color: #ffffff
   font:
-    family: Segoe
+    family: Segoe UI
     size: 30px
     weight: bold
   margin-left: 20px
 
-.main_column_text
+.main_col_text
   margin-top: 5px
   color: #ffffff
   font:
-    family: Segoe
+    family: Segoe UI
     size: 12px
   margin-left: 20px
   margin-right: 20px

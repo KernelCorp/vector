@@ -11,14 +11,14 @@ gem 'jquery-turbolinks'
 gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
 gem 'paperclip'
+gem 'bootstrap-sass', '~> 3.0.2.0'
 
 gem 'russian'
 gem 'friendly_id', '~> 4.0.10'
 
 gem 'haml-rails'
 
-
-gem 'activeadmin_images'
+gem 'activeadmin_images', git: 'https://github.com/KernelCorp/activeadmin_images.git'
 
 gem 'fancybox2-rails', '~> 0.2.4'
 
@@ -34,7 +34,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.3.0'
 gem 'jquery-ui-rails'
 
 # To use ActiveModel has_secure_password

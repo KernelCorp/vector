@@ -1,16 +1,56 @@
 !!!
 %html
-%head
-  %meta{:charset => "utf-8"}
-  %title Vector
+  %head
+    %meta{:charset => "utf-8"}
+    %title Vector
 
-  = stylesheet_link_tag    "application", media: "all"
-  = javascript_include_tag "application"
-  = csrf_meta_tags
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
 
-%body
-  #document-wrapper
-    #menu_container
-      = render partial: '/menu'
-    #content_container
-      = yield
+  %body
+    #document-wrapper
+      #menu_container
+        = render partial: '/menu'
+      #content_container
+        #content_block{class: @page.color}
+          #side_menu
+            #side_menu_pic
+            .side_menu_item{id: 'side-' + @page.color}
+              %a{href: '/pages/' + @page.slug}
+              .side_menu_text
+                = @page.name.upcase
+            - @side_menu_pages.each do |page|
+              - if page != @page
+                .side_menu_item{id: 'side-' + page.color}
+                  %a{href: '/pages/' + page.slug}
+                  .side_menu_text
+                    = page.name.upcase
+          #right_block
+
+
+
+
+
+        -#- if (@page.page.name == 'Натяжные потолки')
+        -#  - color_class = 'red'
+        -#- if (@page.page.name == 'Наливные 3D полы')
+        -#  - color_class = 'yellow'
+        -#- if (@page.page.name == 'Точечные светильники')
+        -#  - color_class = 'brown'
+        -##content_block{class: color_class}
+        -#  #side_menu
+        -#    #side_menu_pic
+        -#    .side_menu_item{id: 'side-' + color_class}
+        -#      .side_menu_text
+        -#        = @page.page.name
+        -#    - @menu_pages.each do |page|
+        -#      - if (page.name == 'Натяжные потолки')
+        -#        - color_class = 'red'
+        -#      - if (page.name == 'Наливные 3D полы')
+        -#        - color_class = 'yellow'
+        -#      - if (page.name == 'Точечные светильники')
+        -#        - color_class = 'brown'
+        -#      .side_menu_item{id: 'side-' + color_class}
+        -#        .side_menu_text
+        -#          = page.name

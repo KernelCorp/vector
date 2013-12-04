@@ -98,11 +98,12 @@ ActiveRecord::Schema.define(:version => 20131204104351) do
   end
 
   create_table "pages", :force => true do |t|
-    t.integer  "page_id"
+    t.integer  "parent_id"
     t.string   "name",       :null => false
     t.string   "slug",       :null => false
     t.text     "content"
     t.string   "redirect"
+    t.string   "color"
     t.string   "meta_title"
     t.text     "meta_desc"
     t.datetime "created_at", :null => false

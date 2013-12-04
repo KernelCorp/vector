@@ -1,3 +1,9 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+#ready = ->
+#  if document.location.pathname == '/pages/odno' + /*/
+#    $('#side_menu_pic').addClass('side_menu_pic_red')
+#
+#$(document).ready ready
+#
+#height = parseInt $('#na_page_container').css('height')
+#$('.scrollable_container').css('height',height - 201)
+#$('.scrollable').css('height',height - 201)
