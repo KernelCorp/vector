@@ -13,10 +13,44 @@
       #menu_container
         = render partial: '/menu'
       #content_container
-        #content_block
+        #content_block{class: @page.color}
           #side_menu
             #side_menu_pic
-              =yield :side_menu_image
-            .side_menu_item{id: 'side-1'}
-            .side_menu_item{id: 'side-2'}
-            .side_menu_item{id: 'side-3'}
+            .side_menu_item{id: 'side-' + @page.color}
+              %a{href: '/pages/' + @page.slug}
+              .side_menu_text
+                = @page.name.upcase
+            - @side_menu_pages.each do |page|
+              - if page != @page
+                .side_menu_item{id: 'side-' + page.color}
+                  %a{href: '/pages/' + page.slug}
+                  .side_menu_text
+                    = page.name.upcase
+          #right_block
+
+
+
+
+
+        -#- if (@page.page.name == 'Натяжные потолки')
+        -#  - color_class = 'red'
+        -#- if (@page.page.name == 'Наливные 3D полы')
+        -#  - color_class = 'yellow'
+        -#- if (@page.page.name == 'Точечные светильники')
+        -#  - color_class = 'brown'
+        -##content_block{class: color_class}
+        -#  #side_menu
+        -#    #side_menu_pic
+        -#    .side_menu_item{id: 'side-' + color_class}
+        -#      .side_menu_text
+        -#        = @page.page.name
+        -#    - @menu_pages.each do |page|
+        -#      - if (page.name == 'Натяжные потолки')
+        -#        - color_class = 'red'
+        -#      - if (page.name == 'Наливные 3D полы')
+        -#        - color_class = 'yellow'
+        -#      - if (page.name == 'Точечные светильники')
+        -#        - color_class = 'brown'
+        -#      .side_menu_item{id: 'side-' + color_class}
+        -#        .side_menu_text
+        -#          = page.name
