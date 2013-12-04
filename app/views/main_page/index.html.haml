@@ -1,30 +1,12 @@
-%a{href: '/'}
-  .main_col{id: 'first_col'}
-    .main_col_pic{id: 'first_col_pic'}
+- i = 0
+- @pages.each do |page|
+  - if i == 1
+    .main_separator
+  - i = 1
+  .main_col{id: 'main_col_' +page.color}
+    %a{href: '/pages/' + page.slug }
+    .main_col_pic{id: 'main_pic_' + page.color}
     .main_col_title
-      НАТЯЖНЫЕ ПОТОЛКИ
+      = page.name
     .main_col_text
-      Полотна от ведущих европейских производителей. От недорогих до элитных.
-      Весь товар сертифицирован
-
-.main_separator
-
-%a{href: '/'}
-  .main_col{id: 'second_col'}
-    .main_col_pic{id: 'second_col_pic'}
-    .main_col_title
-      ТОЧЕЧНЫЕ СВЕТИЛЬНИКИ
-    .main_col_text
-      Каталог светильников постоянно пополняется новыми модификациями светильников.
-      Продукция имеет все необходимые сертификаты, доступные цены и наличие
-      3-хлетней гарантии.
-
-.main_separator
-
-%a{href: '/'}
-  .main_col{id: 'third_col'}
-    .main_col_pic{id: 'third_col_pic'}
-    .main_col_title
-      НАЛИВНЫЕ 3D ПОЛЫ
-    .main_col_text
-      Декоративные наливные и 3D полы уникальная современная технология, которая позволяет воплотить в жизнь любую дизайнерскую задумку.
+      = page.meta_desc

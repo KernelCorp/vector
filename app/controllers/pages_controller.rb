@@ -6,12 +6,3 @@ class PagesController < ApplicationController
   end
 
 end
-
-#color = page.color.nil? ? page.color : page.parent.color
-#@pages = Page.all
-#@menu_pages = Array.new
-#@pages.each do |page|
-#  if (page.id == page.page.id) && (page.id != @page.id)
-#    @menu_pages << page
-#  end
-#end
