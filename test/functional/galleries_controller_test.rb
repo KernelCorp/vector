@@ -4,16 +4,18 @@ class GalleriesControllerTest < ActionController::TestCase
 
   fixtures :galleries
 
-  test 'show page with template name' do
-    @gallery = galleries(:with_template)
-    get(:show, {'id' => @gallery.id})
-    assert_template 'show_'.concat(@gallery.template_name)
+  test 'get floor galleries' do
+    get :index, class_name: 'FloorGallery'
+    galleries_test = assigns(:galleries)
+    floor_galleries = FloorGallery.all
+    assert_equal galleries_test.count, floor_galleries.count
   end
 
-  test 'show page without template name' do
-    @gallery = galleries(:without_template)
-    get(:show, {'id' => @gallery.id})
-    assert_template 'show'
+  test 'get ceiling galleries' do
+    get :index, class_name: 'CeilingGallery'
+    galleries_test = assigns(:galleries)
+    ceiling_galleries = CeilingGallery.all
+    assert_equal galleries_test.count, ceiling_galleries.count
   end
 
 end

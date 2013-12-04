@@ -4,7 +4,8 @@ class Image < ActiveRecord::Base
 
   has_attached_file :attachment,
                                :styles => {
-                               :thumb => ["50x50#", :png]
+                                :small => ["142x115#", :png],
+                                :thumb => ["50x50#", :png]
                                },
                                :path => ':rails_root/public/system/images/:style/:filename',
                                :url => '/system/images/:style/:filename'

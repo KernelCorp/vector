@@ -20,6 +20,24 @@ ru:
         few: "Страницы"
         many: "Страницы"
         other: "Страниц"
+      floor_gallery:
+        zero: "Галерей полов"
+        one: "Галерея полов"
+        few: "Галереи полов"
+        many: "Галереи полов"
+        other: "Галерей полов"
+      ceiling_gallery:
+        zero: "Галерей потолков"
+        one: "Галерея потолков"
+        few: "Галереи потолков"
+        many: "Галереи потолков"
+        other: "Галерей потолков"
+      image:
+        zero: "Картинок"
+        one: "Картинка"
+        few: "Картинки"
+        many: "Картинки"
+        other: "Картинок"
 
     attributes:
       admin_user:
@@ -45,6 +63,14 @@ ru:
         redirect: "Перенаправление"
         meta_title: "Мета-заголовок"
         meta_desc: "Мета-описание"
+      image:
+        attachment: "Файл"
+      ceiling_gallery:
+        title: "Название"
+        image: "Изображение"
+      floor_gallery:
+        title: "Название"
+        image: "Изображение"
 
   devise:
     failure:

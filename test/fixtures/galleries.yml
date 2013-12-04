@@ -1,11 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-with_template:
+floor_red:
   id: 1
   title: test_1
-  template_name: color_gallery
+  type: FloorGallery
 
-without_template:
+floor_white:
   id: 2
   title: test_2
+  type: FloorGallery
+
+floor_blue:
+  id: 3
+  title: test_2
+  type: FloorGallery
+
+ceiling_white:
+  id: 4
+  title: test_2
+  type: CeilingGallery
+
+ceiling_yellow:
+  id: 5
+  title: test_2
+  type: CeilingGallery
+
+
 
