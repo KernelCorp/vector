@@ -8,11 +8,15 @@ gem 'rails', '3.2.13'
 gem 'mysql2', '0.3.11'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
-gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
 gem 'paperclip'
 gem 'bootstrap-sass', '~> 3.0.2.0'
 gem 'jquery-minicolors-rails', git: 'https://github.com/kostia/jquery-minicolors-rails'
+
+gem 'activeadmin'
+gem 'tinymce-rails'
+gem 'activeadmin_tinymce', '0.0.1'
+gem 'activeadmin_images'
 
 gem 'russian'
 gem 'friendly_id', '~> 4.0.10'
@@ -20,7 +24,6 @@ gem 'friendly_id', '~> 4.0.10'
 gem 'haml-rails'
 gem 'unicorn', platform: :ruby
 
-gem 'activeadmin_images', git: 'https://github.com/KernelCorp/activeadmin_images.git'
 
 gem 'fancybox2-rails', '~> 0.2.4'
 
