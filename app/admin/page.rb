@@ -7,7 +7,7 @@ ActiveAdmin.register Page do
     column :id
     column :name
     column :content
-    column :page_id
+    column :parent
     default_actions
   end
 
@@ -16,7 +16,7 @@ ActiveAdmin.register Page do
       row :id
       row :name
       row :content
-      row :page_id
+      row :parent
       row :redirect
       row :meta_title
       row :meta_desc
@@ -27,7 +27,7 @@ ActiveAdmin.register Page do
     f.inputs do
       f.input :name
       f.input :content
-      f.input :page_id, as: :select, collection: Page.all
+      f.input :parent, as: :select, collection: Page.all
       f.input :redirect
       f.input :meta_title
       f.input :meta_desc
