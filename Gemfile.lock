@@ -6,6 +6,14 @@ GIT
       activeadmin
       rails (~> 3.2.13)
 
+GIT
+  remote: https://github.com/kostia/jquery-minicolors-rails
+  revision: 97e8e697c3bdf53bfe03dd5912874bba45852fdf
+  specs:
+    jquery-minicolors-rails (2.1.1)
+      jquery-rails
+      rails (>= 3.2.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -206,6 +214,7 @@ DEPENDENCIES
   fancybox2-rails (~> 0.2.4)
   friendly_id (~> 4.0.10)
   haml-rails
+  jquery-minicolors-rails!
   jquery-rails (= 2.3.0)
   jquery-turbolinks
   jquery-ui-rails

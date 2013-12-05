@@ -12,6 +12,7 @@ gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
 gem 'paperclip'
 gem 'bootstrap-sass', '~> 3.0.2.0'
+gem 'jquery-minicolors-rails', git: 'https://github.com/kostia/jquery-minicolors-rails'
 
 gem 'russian'
 gem 'friendly_id', '~> 4.0.10'

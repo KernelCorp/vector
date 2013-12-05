@@ -2,6 +2,7 @@ ActiveAdmin.register FloorSpectrum do
   form do |f|
     f.inputs do
       f.input :name
+      f.input :color, as: :string, input_html: {class: 'has_colorpicker'}
     end
     f.has_many :colors, allow_destroy: true do |cf|
       cf.inputs do
