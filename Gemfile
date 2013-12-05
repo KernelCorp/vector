@@ -17,6 +17,7 @@ gem 'russian'
 gem 'friendly_id', '~> 4.0.10'
 
 gem 'haml-rails'
+gem 'unicorn', platform: :ruby
 
 gem 'activeadmin_images', git: 'https://github.com/KernelCorp/activeadmin_images.git'
 
