@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(:version => 20131205083221) do
     t.datetime "attachment_updated_at"
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
-    t.integer  "colors_id"
+    t.integer  "color_id"
   end
 
   create_table "lamps", :force => true do |t|

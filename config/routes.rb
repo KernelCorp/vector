@@ -8,6 +8,9 @@ Vector::Application.routes.draw do
 
   resources :galleries, only: [:index]
 
+  resources :floor_spectrums, only: [:index]
+  resources :ceiling_spectrums, only: [:index]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

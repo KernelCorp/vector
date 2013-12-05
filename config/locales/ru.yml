@@ -38,6 +38,25 @@ ru:
         few: "Картинки"
         many: "Картинки"
         other: "Картинок"
+      color:
+        zero: "Цветов"
+        one: "Цвет"
+        few: "Цвета"
+        many: "Цвета"
+        other: "Цветов"
+      floor_spectrum:
+        zero: "Гамм полов"
+        one: "Гамма полов"
+        few: "Гаммы полов"
+        many: "Гаммы полов"
+        other: "Гамм полов"
+      ceiling_spectrum:
+        zero: "Гамм потолков"
+        one: "Гамма потолков"
+        few: "Гаммы потолков"
+        many: "Гаммы потолков"
+        other: "Гамм потолков"
+
 
     attributes:
       admin_user:
@@ -71,6 +90,15 @@ ru:
       floor_gallery:
         title: "Название"
         image: "Изображение"
+      color:
+        name: "Название"
+        image: "Фото"
+      floor_spectrum:
+        name: "Название"
+        colors: "Цвета"
+      ceiling_spectrum:
+        name: "Название"
+        colors: "Цвета"
 
   devise:
     failure:

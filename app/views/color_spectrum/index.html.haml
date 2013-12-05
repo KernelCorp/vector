@@ -1,0 +1,9 @@
+- @color_spectrums.each do |spec|
+  .spectrum-wrapper
+    %h2
+      = spec.name
+    .colors-wrapper
+      - spec.colors.each do |color|
+        .color
+          %img{src: color.image.attachment.url(:small_spectrum)}
+          = color.name

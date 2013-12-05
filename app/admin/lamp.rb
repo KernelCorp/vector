@@ -4,7 +4,7 @@ ActiveAdmin.register Lamp do
   filter :name
 
   index do
-    column :id
+    selectable_column
     column :category_id do |lamp|
       lamp.category.name
     end
