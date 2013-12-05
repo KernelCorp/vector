@@ -1,0 +1,3 @@
+class FloorGallery < Gallery
+
+end

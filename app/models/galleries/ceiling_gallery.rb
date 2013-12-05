@@ -1,0 +1,3 @@
+class CeilingGallery < Gallery
+
+end

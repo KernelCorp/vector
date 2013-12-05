@@ -20,6 +20,8 @@ gem 'haml-rails'
 
 gem 'activeadmin_images', git: 'https://github.com/KernelCorp/activeadmin_images.git'
 
+gem 'fancybox2-rails', '~> 0.2.4'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

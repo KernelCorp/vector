@@ -6,7 +6,7 @@ Vector::Application.routes.draw do
 
   resources :pages, only: [:show], path: 'pages'
 
-  resources :galleries, only: [:show]
+  resources :galleries, only: [:index]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

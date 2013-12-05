@@ -63,5 +63,10 @@ module Vector
     I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.yml').to_s]
     I18n.locale = :ru
 
+    # Paperclip defaults
+    config.paperclip_defaults = { :convert_options => { :all => ' -interlace Line' } }
+
+    # Galleries classes
+    config.autoload_paths += Dir["#{Rails.root}/app/models/*/**/"]
   end
 end
