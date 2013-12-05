@@ -20,26 +20,27 @@
           #side_menu
             #side_menu_pic
             .side_menu_item{id: 'side-' + @page.color}
-              %a{href: '/pages/' + @page.slug}
+              - parent = @page.parent.nil? ? @page : @page.parent
+              = link_to '', parent
               .side_menu_text
-                = @page.name
+                = parent.name
               .side_menu_desc
-                = raw @page.meta_desc
-            - @side_menu_pages.each do |page|
-              - if page != @page
+                = raw parent.meta_desc
+            - @primary_pages.each do |page|
+              - if page != parent
                 .side_menu_item{id: 'side-' + page.color}
-                  %a{href: '/pages/' + page.slug}
+                  = link_to '', page
                   .side_menu_text
                     = page.name
 
           #right_block
             %nav
               - i = 0
-              - @parent.pages.each do |page|
+              - parent.pages.each do |page|
                 - (page == @page) ? active_class = 'active_item' : active_class = ''
                 - i = i + 1
                 .top_menu_item{class: active_class, id: 'top_menu_item_' + i.to_s}
-                  %a{href: '/pages/' + page.slug}
+                  = link_to '', page
                   .top_menu_text
                     = page.name
             #right_block_content
