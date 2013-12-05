@@ -7,8 +7,5 @@ class Gallery < ActiveRecord::Base
 
   accepts_nested_attributes_for :images, :allow_destroy => :true
 
-  scope :all_galleries_in_class, ->(class_name){class_name.constantize.all}
-
-
 
 end

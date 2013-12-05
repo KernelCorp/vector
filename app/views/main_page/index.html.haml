@@ -1,12 +1,12 @@
 - i = 0
-- @pages.each do |page|
+- @primary_pages.each do |page|
   - if i == 1
     .main_separator
   - i = 1
   .main_col{id: 'main_col_' +page.color}
-    %a{href: '/pages/' + page.slug }
+    = link_to '', page
     .main_col_pic{id: 'main_pic_' + page.color}
     .main_col_title
       = page.name
     .main_col_text
-      = page.meta_desc
+      = raw page.meta_desc

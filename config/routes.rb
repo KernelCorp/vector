@@ -6,7 +6,9 @@ Vector::Application.routes.draw do
 
   resources :pages, only: [:show], path: 'pages'
 
-  resources :galleries, only: [:index]
+  resources :ceiling_galleries, only: [:index]
+  resources :floor_galleries, only: [:index]
+
 
   resources :floor_spectrums, only: [:index]
   resources :ceiling_spectrums, only: [:index]
