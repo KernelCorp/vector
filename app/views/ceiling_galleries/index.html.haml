@@ -1,8 +1,1 @@
-.galleries-wrapper
-  - @galleries.each do |gallery|
-    %h2
-      = gallery.title
-    - gallery.images.each do |image|
-      .image-wrapper
-        %img{src: image.attachment.url(:small)}
-        %a.gallery-image{rel: 'gallery', href: image.attachment.url}
+=render partial: '/galleries/gallery_body'
