@@ -36,8 +36,11 @@ GEM
     activeadmin_images (0.2.0)
       activeadmin
       rails (~> 3.2.13)
-    activeadmin_tinymce (0.0.1)
+    activeadmin_tinymce (0.1.0)
+      activeadmin
       rails (~> 3.2.13)
+      slim-rails (~> 2.0.3)
+      tinymce-rails
     activemodel (3.2.13)
       activesupport (= 3.2.13)
       builder (~> 3.0.0)
@@ -64,6 +67,10 @@ GEM
       sass (>= 3.2.0)
       thor
     builder (3.0.4)
+    capistrano (3.0.1)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 0.0.23)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.3)
@@ -131,6 +138,9 @@ GEM
     multi_json (1.8.2)
     mysql2 (0.3.11)
     mysql2 (0.3.11-x86-mingw32)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.7.0)
     orm_adapter (0.5.0)
     paperclip (3.5.2)
       activemodel (>= 3.0.0)
@@ -176,11 +186,26 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    slim (2.0.2)
+      temple (~> 0.6.6)
+      tilt (>= 1.3.3, < 2.1)
+    slim-rails (2.0.4)
+      actionpack (>= 3.0, < 4.1)
+      activesupport (>= 3.0, < 4.1)
+      railties (>= 3.0, < 4.1)
+      slim (~> 2.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sshkit (1.2.0)
+      net-scp (>= 1.1.2)
+      net-ssh
+      term-ansicolor
+    temple (0.6.7)
+    term-ansicolor (1.2.2)
+      tins (~> 0.8)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
       ref
@@ -188,12 +213,13 @@ GEM
     thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
+    tins (0.13.1)
     tinymce-rails (4.0.11)
       railties (>= 3.1.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (1.3.1)
+    turbolinks (2.0.0)
       coffee-rails
     tzinfo (0.3.38)
     uglifier (2.3.2)
@@ -213,8 +239,9 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   activeadmin_images
-  activeadmin_tinymce (= 0.0.1)
+  activeadmin_tinymce (= 0.1.0)
   bootstrap-sass (~> 3.0.2.0)
+  capistrano
   coffee-rails (~> 3.2.1)
   fancybox2-rails (~> 0.2.4)
   friendly_id (~> 4.0.10)

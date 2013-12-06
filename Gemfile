@@ -15,7 +15,7 @@ gem 'jquery-minicolors-rails', git: 'https://github.com/kostia/jquery-minicolors
 
 gem 'activeadmin'
 gem 'tinymce-rails'
-gem 'activeadmin_tinymce', '0.0.1'
+gem 'activeadmin_tinymce', '0.1.0'
 gem 'activeadmin_images'
 
 gem 'russian'
@@ -49,10 +49,10 @@ gem 'jquery-ui-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'
