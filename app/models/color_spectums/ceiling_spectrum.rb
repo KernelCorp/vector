@@ -1,0 +1,3 @@
+class CeilingSpectrum < ColorSpectrum
+
+end

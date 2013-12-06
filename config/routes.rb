@@ -1,12 +1,18 @@
 Vector::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+  #mount ActiveAdminTinymce::Engine => '/', as: 'admin_editor'
 
   root to: 'main_page#index'
 
   resources :pages, only: [:show], path: 'pages'
 
-  resources :galleries, only: [:index]
+  resources :ceiling_galleries, only: [:index]
+  resources :floor_galleries, only: [:index]
+
+
+  resources :floor_spectrums, only: [:index]
+  resources :ceiling_spectrums, only: [:index]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131204104351) do
+ActiveRecord::Schema.define(:version => 20131205083221) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -56,6 +56,20 @@ ActiveRecord::Schema.define(:version => 20131204104351) do
 
   add_index "categories", ["slug"], :name => "index_categories_on_slug", :unique => true
 
+  create_table "color_spectrums", :force => true do |t|
+    t.string   "name"
+    t.string   "type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "colors", :force => true do |t|
+    t.string   "name"
+    t.integer  "color_spectrum_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
   create_table "galleries", :force => true do |t|
     t.string   "title"
     t.datetime "created_at", :null => false
@@ -78,6 +92,7 @@ ActiveRecord::Schema.define(:version => 20131204104351) do
     t.datetime "attachment_updated_at"
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
+    t.integer  "color_id"
   end
 
   create_table "lamps", :force => true do |t|

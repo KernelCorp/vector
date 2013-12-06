@@ -1,0 +1,13 @@
+%p.warning
+  Внимание! Цвета на экране монитора отличаются от реальных из-за особенностей цветопередачи.
+  Данная таблица предоставлена только в ознакомительных целях. Спрашивайте  каталог цветов у наших специалистов.
+- @color_spectrums.each do |spec|
+  .spectrum-wrapper.dropdown-wrapper
+    %a.spectrum-title.dropdown-title{style: "color: #{spec.color}"}
+      = spec.name
+    .colors-wrapper.dropdown-content
+      - spec.colors.each do |color|
+        .color
+          %img{src: color.image.attachment.url(:small_spectrum)}
+          %span.name
+            = color.name
