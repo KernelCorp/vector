@@ -18,4 +18,5 @@
 
 /config/database.yml
 /public/system
+/public/assets
 /Gemfile.local
