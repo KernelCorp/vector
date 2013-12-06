@@ -49,10 +49,16 @@ gem 'jquery-ui-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-gem 'unicorn'
+gem 'unicorn', platform: :ruby
 
-# Deploy with Capistrano
-gem 'capistrano'
+# For deploy
+group :development do
+  gem 'capistrano', '< 3.0.0'
+  gem 'rvm-capistrano'
+  gem 'nginx-config'
+end
+
+gem 'rvm-capistrano'
 
 # To use debugger
 # gem 'debugger'
