@@ -32,14 +32,13 @@
                   = link_to '', page
                   .side_menu_text
                     = page.name
-
-          #right_block
+          #right_block>
             %nav
               - i = 0
               - parent.pages.each do |page|
                 - (page == @page) ? active_class = 'active_item' : active_class = ''
                 - i = i + 1
-                .top_menu_item{class: active_class, id: 'top_menu_item_' + i.to_s}
+                .top_menu_item{class: active_class, id: 'top_menu_item_' + i.to_s}>
                   = link_to '', page
                   .top_menu_text
                     = page.name
