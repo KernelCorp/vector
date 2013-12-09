@@ -6,6 +6,7 @@
 
 //= require jquery-ui
 //= require jquery.minicolors
-//= require_tree ./admin_lib
+//= require admin_lib/init_tinymce
+//= require_tree ./admin_lib/
 
 

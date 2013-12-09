@@ -15,7 +15,7 @@ gem 'jquery-minicolors-rails', git: 'https://github.com/kostia/jquery-minicolors
 
 gem 'activeadmin'
 gem 'tinymce-rails'
-gem 'activeadmin_tinymce', '0.0.1'
+gem 'activeadmin_tinymce', '0.1.0'
 gem 'activeadmin_images'
 
 gem 'russian'
@@ -34,7 +34,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -49,10 +49,16 @@ gem 'jquery-ui-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn', platform: :ruby
 
-# Deploy with Capistrano
-# gem 'capistrano'
+# For deploy
+group :development do
+  gem 'capistrano', '< 3.0.0'
+  gem 'rvm-capistrano'
+  gem 'nginx-config'
+end
+
+gem 'rvm-capistrano'
 
 # To use debugger
 # gem 'debugger'
