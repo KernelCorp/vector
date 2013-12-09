@@ -1,0 +1,24 @@
+.lamps-wrapper
+  - @lamps.each do |lamp|
+    .lamp-wrapper.light-on
+      - if !lamp.light_off_file_name.blank? && !lamp.light_on_file_name.blank?
+        - image_on = lamp.light_on
+        - image_off = lamp.light_off
+        .image-on.image
+          %img{src: image_on.url(:small)}
+          %a.on-off
+            %span
+        .image-off.image
+          %img{src: image_off.url(:small)}
+          %a.on-off
+            %span
+      - else
+        - image = lamp.light_off if !lamp.light_off_file_name.blank?
+        - image = lamp.light_on if !lamp.light_on_file_name.blank?
+        .image.visible
+          %img{src: image.url(:small)}
+      .lamp-info
+        %span.name
+          = lamp.name
+        %span.price
+          = lamp.price

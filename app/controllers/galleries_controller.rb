@@ -5,4 +5,6 @@ class GalleriesController < ApplicationController
     @galleries = clazz.all
   end
 
+
+
 end
