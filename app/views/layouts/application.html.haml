@@ -39,9 +39,7 @@
                 - (page == @page) ? active_class = 'active_item' : active_class = ''
                 - i = i + 1
                 .top_menu_item{class: active_class, id: 'top_menu_item_' + i.to_s}>
-                  = link_to '', page
-                  .top_menu_text
-                    = page.name
+                  = link_to page.name, page, class: 'top_menu_text'
             #right_block_content
               = yield
 
