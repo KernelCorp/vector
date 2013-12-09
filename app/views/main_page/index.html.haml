@@ -1,9 +1,9 @@
 - i = 0
 - @primary_pages.each do |page|
   - if i == 1
-    .main_separator
+    .main_separator>
   - i = 1
-  .main_col{id: 'main_col_' +page.color}
+  .main_col{id: 'main_col_' +page.color}>
     = link_to '', page
     .main_col_pic{id: 'main_pic_' + page.color}
     .main_col_title
