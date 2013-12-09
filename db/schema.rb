@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131205083221) do
+ActiveRecord::Schema.define(:version => 20131209100400) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20131205083221) do
     t.string   "type"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "color"
   end
 
   create_table "colors", :force => true do |t|
@@ -98,7 +99,6 @@ ActiveRecord::Schema.define(:version => 20131205083221) do
   create_table "lamps", :force => true do |t|
     t.integer  "category_id"
     t.string   "name"
-    t.text     "description"
     t.string   "price"
     t.string   "light_on_file_name"
     t.string   "light_on_content_type"

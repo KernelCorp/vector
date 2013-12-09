@@ -1,0 +1,47 @@
+.lamps-wrapper
+  padding-left: 15px
+  .lamp-wrapper
+    display: inline-block
+    margin-right: 15px
+    &.light-on
+      .image-on
+        display: block
+      .image-off
+        display: none
+    &.light-off
+      .image-on
+        display: none
+      .image-off
+        display: block
+  .image
+    position: relative
+  a.on-off
+    cursor: pointer
+    position: absolute
+    left: 5px
+    top: 5px
+    span
+      height: 25px
+      display: inline-block
+  .image-on
+    a.on-off
+      left: 9px
+      top: 9px
+      span
+        width: 13px
+        background: url('/images/light_off.png') 0 0 no-repeat
+  .image-off
+    a.on-off
+
+      span
+        width: 17px
+        background: url('/images/light_on.png') 0 0 no-repeat
+  .lamp-info
+    .name
+      text-align: center
+      display: block
+      color: #bbc7cc
+    .price
+      display: block
+      text-align: right
+      color: #4b2a57

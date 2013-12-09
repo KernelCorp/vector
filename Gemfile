@@ -15,7 +15,7 @@ gem 'jquery-minicolors-rails', git: 'https://github.com/kostia/jquery-minicolors
 
 gem 'activeadmin'
 gem 'tinymce-rails'
-gem 'activeadmin_tinymce', git: 'https://github.com/KernelCorp/active_admin_tinymce'
+gem 'activeadmin_tinymce'
 gem 'activeadmin_images'
 
 gem 'russian'

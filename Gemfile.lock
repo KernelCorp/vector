@@ -1,14 +1,4 @@
 GIT
-  remote: https://github.com/KernelCorp/active_admin_tinymce
-  revision: 550baea1f0bdcf502b4e74ecfe4baa3b03a2297b
-  specs:
-    activeadmin_tinymce (0.1.0)
-      activeadmin
-      rails (~> 3.2.13)
-      slim-rails (~> 2.0.3)
-      tinymce-rails
-
-GIT
   remote: https://github.com/kostia/jquery-minicolors-rails
   revision: 97e8e697c3bdf53bfe03dd5912874bba45852fdf
   specs:
@@ -46,6 +36,11 @@ GEM
     activeadmin_images (0.2.0)
       activeadmin
       rails (~> 3.2.13)
+    activeadmin_tinymce (0.1.0)
+      activeadmin
+      rails (~> 3.2.13)
+      slim-rails (~> 2.0.3)
+      tinymce-rails
     activemodel (3.2.13)
       activesupport (= 3.2.13)
       builder (~> 3.0.0)
@@ -247,7 +242,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   activeadmin_images
-  activeadmin_tinymce!
+  activeadmin_tinymce
   bootstrap-sass (~> 3.0.2.0)
   capistrano (< 3.0.0)
   coffee-rails (~> 3.2.1)

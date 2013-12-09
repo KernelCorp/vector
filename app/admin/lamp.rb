@@ -26,7 +26,6 @@ ActiveAdmin.register Lamp do
         lamp.category.name
       end
       row :name
-      row :description
       row :price
       row :light_on do |lamp|
         image_tag lamp.light_on.url(:thumb)
@@ -41,7 +40,6 @@ ActiveAdmin.register Lamp do
     f.inputs do
       f.input :category_id, as: :select, collection: Category.all
       f.input :name
-      f.input :description
       f.input :price
       f.input :light_on, as: :file
       f.input :light_off, as: :file
