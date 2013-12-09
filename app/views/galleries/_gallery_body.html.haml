@@ -1,8 +1,5 @@
 .galleries-wrapper
-  .bid_button
-    %a{href: '/'}
-    .bid_button_text
-      ОСТАВИТЬ ЗАЯВКУ НА ЗАМЕР
+  = render partial: '/bid_button'
   - @galleries.each do |gallery|
     %h2
       = gallery.title
