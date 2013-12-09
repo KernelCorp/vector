@@ -15,13 +15,15 @@ gem 'jquery-minicolors-rails', git: 'https://github.com/kostia/jquery-minicolors
 
 gem 'activeadmin'
 gem 'tinymce-rails'
-gem 'activeadmin_tinymce', '0.0.1'
+gem 'activeadmin_tinymce', git: 'https://github.com/KernelCorp/active_admin_tinymce'
 gem 'activeadmin_images'
 
 gem 'russian'
 gem 'friendly_id', '~> 4.0.10'
 
 gem 'haml-rails'
+gem "slim-rails", "~> 2.0.3"
+
 gem 'unicorn', platform: :ruby
 
 
