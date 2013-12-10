@@ -250,7 +250,7 @@ DEPENDENCIES
   friendly_id (~> 4.0.10)
   haml-rails
   jquery-minicolors-rails!
-  jquery-rails (= 2.3.0)
+  jquery-rails (< 3.0.0)
   jquery-turbolinks
   jquery-ui-rails
   meta_search (>= 1.1.0.pre)
