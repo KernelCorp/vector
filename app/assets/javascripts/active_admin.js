@@ -6,7 +6,5 @@
 //= require jquery-ui
 //= require jquery.minicolors
 
-//= require_tree ./admin_lib
-
 
 
