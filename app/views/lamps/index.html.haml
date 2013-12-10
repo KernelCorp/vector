@@ -6,10 +6,12 @@
         - image_off = lamp.light_off
         .image-on.image
           %img{src: image_on.url(:small)}
+          %a.out-image{href: image_on.url}
           %a.on-off
             %span
         .image-off.image
           %img{src: image_off.url(:small)}
+          %a.out-image{href: image_off.url}
           %a.on-off
             %span
       - else
@@ -17,6 +19,7 @@
         - image = lamp.light_on if !lamp.light_on_file_name.blank?
         .image.visible
           %img{src: image.url(:small)}
+          %a.out-image{href: image.url}
       .lamp-info
         %span.name
           = lamp.name

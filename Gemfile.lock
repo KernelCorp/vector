@@ -36,7 +36,7 @@ GEM
     activeadmin_images (0.2.0)
       activeadmin
       rails (~> 3.2.13)
-    activeadmin_tinymce (0.1.0)
+    activeadmin_tinymce (0.1.2)
       activeadmin
       rails (~> 3.2.13)
       slim-rails (~> 2.0.3)
@@ -204,7 +204,7 @@ GEM
       activesupport (>= 3.0, < 4.1)
       railties (>= 3.0, < 4.1)
       slim (~> 2.0)
-    sprockets (2.2.1)
+    sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -250,7 +250,7 @@ DEPENDENCIES
   friendly_id (~> 4.0.10)
   haml-rails
   jquery-minicolors-rails!
-  jquery-rails (= 2.3.0)
+  jquery-rails
   jquery-turbolinks
   jquery-ui-rails
   meta_search (>= 1.1.0.pre)
