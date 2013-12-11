@@ -6,7 +6,9 @@ ActiveAdmin.register Page do
   index do
     column :id
     column :name
-    column :content
+    column :content do |page|
+      raw page.content
+    end
     column :parent
     default_actions
   end
@@ -15,7 +17,9 @@ ActiveAdmin.register Page do
     attributes_table do
       row :id
       row :name
-      row :content
+      row :content do |page|
+        raw page.content
+      end
       row :parent
       row :redirect
       row :meta_title
