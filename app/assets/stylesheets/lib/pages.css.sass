@@ -23,6 +23,9 @@
       tr
         td:last-child
           border-right: none
+    .table_color_row
+      background: #e6d0d4
+
     .floor-price
       border-spacing: 0
       tr:nth-child(2n+1)
@@ -31,10 +34,29 @@
       tr:first-child
         td
           background: #ffffff
+      tr:nth-child(2n+4)
+        td
+          border-left: 2px solid #eeecce
+        td:last-child
+          border-right: 2px solid #eeecce
+      tr:first-child, tr:nth-child(2)
+        td
+          border-left: 2px solid #eeecce
+        td:last-child
+          border-right: 2px solid #eeecce
+        td:first-child
+          border-left: none
+      tr:nth-child(2n+3)
+        td
+          border-left: 2px solid #e1dda7
+        td:last-child
+          border-right: 2px solid #e1dda7
       tr:nth-child(3n)
         td:first-child
           background: #ffffff
+          border-left: none
+      tr:nth-child(3n+6)
+        td:first-child
+          border-top: 2px solid #eeecce
 
 
-    .table_color_row
-      background: #e6d0d4
