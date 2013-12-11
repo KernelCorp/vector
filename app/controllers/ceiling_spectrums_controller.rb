@@ -9,7 +9,7 @@ class CeilingSpectrumsController < ApplicationController
 
   private
   def get_page
-    @page = Page.find params[:page_id] if params[:page_id]
+    @page = Page.find 2
   end
 
 end

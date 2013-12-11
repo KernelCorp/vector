@@ -2,7 +2,7 @@ ActiveAdmin.register Image do
   actions :all, except: [:edit]
 
   collection_action :add_files, method: :post do
-    @image = Image.new(attachment: @raw_file)
+    @image = Image.new(attachment: @raw_file) if params[:class_name].nil? && params[:attachment_name].nil?
     if @image.save!
       render json: { success: true, :url => @image.attachment.url(:thumb), :id => @image.id }
     else
@@ -12,6 +12,12 @@ ActiveAdmin.register Image do
 
   controller do
     before_filter :parse_raw_upload, only: [:add_files]
+
+    def destroy
+      @image = Image.find(params[:id])
+      @image.delete
+      redirect_to :back
+    end
 
     private
     def parse_raw_upload
@@ -37,6 +43,7 @@ ActiveAdmin.register Image do
     column :preview do |image|
       image_tag image.attachment.url(:thumb)
     end
+    default_actions
   end
 
   show do
@@ -47,6 +54,7 @@ ActiveAdmin.register Image do
       row :preview do |image|
         image_tag image.attachment.url(:original)
       end
+      actions
     end
   end
 

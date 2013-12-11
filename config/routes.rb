@@ -6,15 +6,14 @@ Vector::Application.routes.draw do
   root to: 'main_page#index'
 
   resources :pages, only: [:show], path: 'pages' do
-    resources :ceiling_galleries, only: [:index]
-    resources :floor_galleries, only: [:index]
-    resources :floor_spectrums, only: [:index]
-    resources :ceiling_spectrums, only: [:index]
     resources :categories, only: [:show], path: '' do
       resources :lamps, only: [:index]
     end
   end
-
+  resources :ceiling_galleries, only: [:index]
+  resources :floor_galleries, only: [:index]
+  resources :floor_spectrums, only: [:index]
+  resources :ceiling_spectrums, only: [:index]
 
 
 

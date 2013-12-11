@@ -8,7 +8,7 @@ class FloorGalleriesController < ApplicationController
 
   private
   def get_page_id
-    @page = Page.find params[:page_id] if params[:page_id]
+    @page = Page.find 1
   end
 
 end

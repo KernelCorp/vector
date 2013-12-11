@@ -25,11 +25,14 @@ ActiveAdmin.register CeilingSpectrum do
     attributes_table do
       row :name
     end
-    table_for spectrum.colors do
+    table_for spectrum.colors, batch_actions: :destroy do
       column :name
       column :attachment do |color|
         image_tag color.image.attachment.url(:thumb)
       end
+      #column :delete do |color|
+      #  link_to 'Удалить',
+      #end
     end
   end
 
