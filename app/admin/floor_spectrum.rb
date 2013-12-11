@@ -31,5 +31,6 @@ ActiveAdmin.register FloorSpectrum do
         image_tag color.image.attachment.url(:thumb)
       end
     end
+
   end
 end
