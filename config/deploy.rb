@@ -14,7 +14,7 @@ set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"
 set :normalize_asset_timestamps, false
 set :keep_releases, 5
 
-set :rvm_ruby_string, '2.0.0-p353'
+set :rvm_ruby_string, '1.9.3-p484'
 
 set :scm, :git
 set :repository,  "https://github.com/KernelCorp/vector.git"
