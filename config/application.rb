@@ -67,6 +67,6 @@ module Vector
     config.paperclip_defaults = { :convert_options => { :all => ' -interlace Line' } }
 
     # Galleries classes
-    config.autoload_paths += Dir["#{Rails.root}/app/models/*/**/"]
+    config.autoload_paths += Dir["#{Rails.root}/app/models/*/**/"] + Dir["#{Rails.root}/lib"]
   end
 end

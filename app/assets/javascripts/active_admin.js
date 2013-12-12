@@ -1,5 +1,4 @@
 //= require active_admin/base
-//= require fileuploader
 
 //= require jquery
 //= require jquery_ujs
