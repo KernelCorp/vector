@@ -11,6 +11,8 @@
     %a.spectrum-title.dropdown-title{style: "color: #{spec.color}"}
       = spec.name
     .colors-wrapper.dropdown-content
+      - if spec.is_a? CeilingSpectrum
+        = raw spec.description
       - spec.colors.each do |color|
         .color
           %img{src: color.image.attachment.url(:small_spectrum)}
