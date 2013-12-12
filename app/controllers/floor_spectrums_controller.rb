@@ -1,15 +1,14 @@
 class FloorSpectrumsController < ApplicationController
 
-  before_filter :get_page
-
   def index
     @color_spectrums = FloorSpectrum.all
     render 'color_spectrum/index'
   end
 
-  private
-  def get_page
-    @page = Page.find 3
+  protected
+  def get_pages
+    super
+    @page = Page.find_by_redirect floor_spectrums_path
   end
 
 end

@@ -1,14 +1,13 @@
 class FloorGalleriesController < ApplicationController
 
-  before_filter :get_page_id
-
   def index
     @galleries = FloorGallery.all
   end
 
-  private
-  def get_page_id
-    @page = Page.find 3
+  protected
+  def get_pages
+    super
+    @page = Page.find_by_redirect floor_galleries_path
   end
 
 end

@@ -11,12 +11,8 @@ Vector::Application.routes.draw do
   resources :floor_spectrums, only: [:index]
   resources :ceiling_spectrums, only: [:index]
 
-  resources :categories, only: [:show] do
-    resources :lamps, only: [:index]
-  end
-
-
-
+  resources :lamps, only: [:index]
+  resources :categories, only: [:show]
 
 
   # The priority is based upon order of creation:
