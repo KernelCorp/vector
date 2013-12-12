@@ -6,6 +6,7 @@ one:
   redirect: MyString
   meta_title: MyString
   meta_desc: MyText
+  color: red
 
 without_parent_1:
   name: wp1
@@ -34,6 +35,22 @@ with_parent_and_with_color:
   meta_title: wwwp2
   meta_desc: wwwp2
   parent: without_parent_2
+  color: black
+
+floor_galleries_page:
+  name: wwwp234
+  slug: wwwwp324
+  redirect: /floor_galleries
+  meta_title: wwp2
+  meta_desc: wwp2
+  color: black
+
+for_category:
+  name: wwwp2341
+  slug: wwwwp3241
+  redirect: /categories/naruzhnye
+  meta_title: wwp2
+  meta_desc: wwp2
   color: black
 
 
