@@ -8,7 +8,7 @@ class FloorGalleriesController < ApplicationController
 
   private
   def get_page_id
-    @page = Page.find 1
+    @page = Page.find 3
   end
 
 end

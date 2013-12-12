@@ -3,8 +3,8 @@ class FillRedirectForGalleriesAndSpectra < ActiveRecord::Migration
   def change
     Page.find_by_name("Однотонные полы").update_attribute(:redirect, "/floor_spectrums")
     Page.find_by_name("Фактуры и цвета").update_attribute(:redirect, "/ceiling_spectrums")
-    Page.find_by_name("Фотогалерея полов").update_attribute(:redirect, "/floor_galleries")
-    Page.find_by_name("Фотогалерея потолков").update_attribute(:redirect, "/ceiling_galleries")
+    Page.find_by_name('НАЛИВНЫЕ 3D ПОЛЫ').pages.find_by_name("Фотогалерея").update_attribute(:redirect, "/floor_galleries")
+    Page.find_by_name('НАТЯЖНЫЕ ПОТОЛКИ').pages.find_by_name("Фотогалерея").update_attribute(:redirect, "/ceiling_galleries")
     Page.find_by_name("Наружные").update_attribute(:redirect, "/categories/1/lamps")
     Page.find_by_name("Внутренние").update_attribute(:redirect, "/categories/2/lamps")
     Page.find_by_name("Светодиодные панели").update_attribute(:redirect, "/categories/3/lamps")

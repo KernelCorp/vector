@@ -9,7 +9,7 @@ class FloorSpectrumsController < ApplicationController
 
   private
   def get_page
-    @page = Page.find 1
+    @page = Page.find 3
   end
 
 end

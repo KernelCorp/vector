@@ -8,7 +8,7 @@ class CeilingGalleriesController < ApplicationController
 
   private
   def get_page_id
-    @page = Page.find 2
+    @page = Page.find 1
   end
 
 end

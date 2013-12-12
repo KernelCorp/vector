@@ -5,6 +5,6 @@ class LampsController < ApplicationController
   end
   private
   def get_page_id
-    @page = Page.find 3
+    @page = Page.find 2
   end
 end

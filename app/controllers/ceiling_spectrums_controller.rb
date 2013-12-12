@@ -9,7 +9,7 @@ class CeilingSpectrumsController < ApplicationController
 
   private
   def get_page
-    @page = Page.find 2
+    @page = Page.find 1
   end
 
 end
