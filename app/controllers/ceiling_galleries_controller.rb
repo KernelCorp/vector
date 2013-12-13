@@ -1,14 +1,13 @@
 class CeilingGalleriesController < ApplicationController
 
-  before_filter :get_page_id
-
   def index
     @galleries = CeilingGallery.all
   end
 
-  private
-  def get_page_id
-    @page = Page.find 2
+  protected
+  def get_pages
+    super
+    @page = Page.find_by_redirect ceiling_galleries_path
   end
 
 end

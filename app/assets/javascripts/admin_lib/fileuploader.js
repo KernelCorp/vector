@@ -435,22 +435,80 @@ qq.FileUploaderBasic.prototype = {
         var id = this._handler.add(fileContainer);
         var fileName = this._handler.getName(id);
         var submit
+        var globalOwner = this
+
+
+        validate_name = function(parent) {
+            if (parent.getElementsByClassName('qq-image-name')[0].value == ''){
+                if (!parent.getElementsByClassName('error-message').length){
+                    validate_message = document.createElement('p');
+                    validate_message.className = 'error-message';
+                    validate_message.textContent = "Имя обязательно для заполнения";
+                    parent.getElementsByClassName('qq-new-image')[0].appendChild(validate_message);
+                }
+                return false
+            }
+            return true
+        }
+
+        validate_price = function(parent) {
+            if (parent.getElementsByClassName('qq-image-price')[0].value == ''){
+                if (!parent.getElementsByClassName('error-message').length){
+                    validate_message = document.createElement('p');
+                    validate_message.className = 'error-message';
+                    validate_message.textContent = "Имя обязательно для заполнения";
+                    parent.getElementsByClassName('qq-new-image')[0].appendChild(validate_message);
+                }
+                return false
+            }
+            return true
+        }
+
+        upload_on_submit = function(parent) {
+            id = parent.getElementsByClassName('qq-id')[0].value;
+            params = globalOwner._find(globalOwner._element, 'image_params').value;
+            ObjParams = new Object();
+            ObjParams.authenticity_token = params;
+            if (globalOwner._options.params.name) { ObjParams.name = parent.getElementsByClassName('qq-image-name')[0].value; }
+            if (globalOwner._options.params.price) { ObjParams.price = parent.getElementsByClassName('qq-image-price')[0].value; }
+            globalOwner._handler.upload(id, ObjParams);
+        }
+
+
         
-        if (this._options.onSubmit(id, fileName) !== false){
+        if (this._options.onSubmit(id, fileName) !== false) {
             this._onSubmit(id, fileName, this._options.params);
             submitList = document.getElementsByClassName('qq-save-name');
             submit = submitList[submitList.length-1];
+            parent = submit.parentNode.parentNode;
+            if ( !globalOwner._options.params.name) {parent.getElementsByClassName('qq-image-name')[0].style.display = "none"}
+            if ( !globalOwner._options.params.price) {parent.getElementsByClassName('qq-image-price')[0].style.display = "none"}
 
-//            id = parent.getElementsByClassName('qq-id')[0].value;
-            params = this._find(this._element, 'image_params').value;
-			//console.log('!!!!');
-            ObjParams = new Object();
-            ObjParams.authenticity_token = params;
-            this._handler.upload(id, ObjParams);
+                if (this._options.params.name || this._options.params.price){
+                submit.addEventListener('click', function(){
+                    parent = this.parentNode.parentNode;
+                    if (globalOwner._options.params.name) {
+                        if (!validate_name(parent)){return false }
+                    }
+
+                    if (globalOwner._options.params.price) {
+                        if (!validate_price(parent)){return false }
+                    }
 
 
+                    if (parent.getElementsByClassName('error-message').length)
+                        parent.getElementsByClassName('error-message')[0].remove();
+                    upload_on_submit(parent)
 
+
+                    return false;
+                });
+            } else {
+                parent = submit.parentNode.parentNode;
+                upload_on_submit(parent);
+            }
         }
+
     },      
     _validateFile: function(file){
         var name, size;
@@ -561,6 +619,9 @@ qq.FileUploader = function(o){
                 '<span class="qq-upload-size"></span>' +
                 '<img class="qq-image-preview"></img>' +
                 '<div class="qq-new-image">'+
+                '<input class="qq-image-name" placeholder="имя" type="text">'+
+                '<input class="qq-image-price" placeholder="цена" type="text">'+
+                '<button class="qq-save-name">{nameSubmit}</button>'+
                 '</div>'+
                 '<a class="qq-upload-cancel" href="#">{cancelButtonText}</a>' +
                 '<span class="qq-upload-failed-text">{failUploadtext}</span>' +
@@ -756,7 +817,6 @@ qq.extend(qq.FileUploader.prototype, {
         }         
     },
     _addToList: function(id, fileName, params){
-		console.log(params)
         var item = qq.toElement(this._options.fileTemplate);
         item.qqFileId = id;
         inputId = document.createElement('input');

@@ -6,9 +6,6 @@ ActiveAdmin.register Page do
   index do
     column :id
     column :name
-    column :content do |page|
-      raw page.content
-    end
     column :parent
     default_actions
   end

@@ -1,15 +1,14 @@
 class CeilingSpectrumsController < ApplicationController
 
-  before_filter :get_page
-
   def index
     @color_spectrums = CeilingSpectrum.all
     render 'color_spectrum/index'
   end
 
-  private
-  def get_page
-    @page = Page.find 2
+  protected
+  def get_pages
+    super
+    @page = Page.find_by_redirect ceiling_spectrums_path
   end
 
 end

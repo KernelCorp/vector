@@ -4,7 +4,9 @@
         element: document.getElementById('attachment_file_uploader'),
         action: "<%= action_helper %>",
         params: {
-            "authenticity_token": "<%= form_authenticity_token %>"
+           "authenticity_token": "<%= form_authenticity_token %>",
+            "name": true
+//            "price": true
         },
         customHeaders: { "X-File-Upload": "true" }
     });
