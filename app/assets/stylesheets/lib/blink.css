@@ -1,0 +1,41 @@
+.red #top_menu_item_4{
+    -webkit-animation-name: blink;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.red #top_menu_item_4.active_item{
+    -webkit-animation: none;
+    animation: none;
+}
+
+
+@-webkit-keyframes blink{
+  0%{
+      background: #801429
+  }
+
+  50%{
+      background: #c38194;
+  }
+
+  100%{
+      background: #801429
+  }
+}
+@keyframes blink{
+    0%{
+        background: #801429
+    }
+
+    50%{
+        background: #c38194;
+    }
+
+    100%{
+        background: #801429
+    }
+}

@@ -10,6 +10,12 @@ module FilesUpload
 
   module InstanceMethods
     def upload_files
+
+      begin
+        name = SecureRandom.uuid
+      end while not Image.where(:attachment_file_name => name).empty?
+      @raw_file.original_filename = name+'.png'
+
       if self.controller_name.classify == 'FloorGallery' || self.controller_name.classify == 'CeilingGallery'
         @image = self.controller_name.classify.constantize.find(params[:id]).images.create!(attachment: @raw_file)
       end
