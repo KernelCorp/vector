@@ -1,18 +1,19 @@
 #popover_container
-  = form_for Bid.new, remote: true, html: {class: 'inputs'} do |f|
-    .input-wrap
-      = f.text_field :name, type: 'text', placeholder: 'Ваше имя'
-    .input-wrap
-      = f.text_field :address, type: 'text', placeholder: 'Ваш адрес'
-    .input-wrap
-      = f.text_field :phone, type: 'text', placeholder: 'Ваш телефон'
-    .input-wrap
-      = f.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
-    .input-wrap
-      = f.text_field :date, type: 'text', placeholder: 'Дата замера'
-    .input-wrap
-      = f.text_field :time, type: 'text', placeholder: 'Удобное время'
-    .input-wrap
-      = f.text_field :time, type: 'text', placeholder: 'Дополнительная информация'
-    .button-wrap
-      = f.submit class: 'bid_button', value: 'Отправить заявку'
+  #popover_block
+    = form_for Bid.new, remote: true, html: {class: 'inputs'} do |f|
+      .input-wrap
+        = f.text_field :name, type: 'text', placeholder: 'Ваше имя', class: 'important_field'
+      .input-wrap
+        = f.text_field :address, type: 'text', placeholder: 'Ваш адрес', class: 'important_field'
+      .input-wrap
+        = f.text_field :phone, type: 'text', placeholder: 'Ваш телефон', class: 'important_field'
+      .input-wrap
+        = f.text_field :email, type: 'text', placeholder: 'Ваш e-mail', class: 'important_field'
+      .input-wrap
+        = f.text_field :date, type: 'text', placeholder: 'Дата замера', class: 'important_field'
+      .input-wrap
+        = f.text_field :time, type: 'text', placeholder: 'Удобное время', class: 'important_field'
+      .input-wrap{class: 'input-field'}
+        = f.text_area :time, type: 'text', placeholder: 'Дополнительная информация'
+      .button-wrap
+        = f.submit class: 'submit_button', value: 'ОТПРАВИТЬ ЗАЯВКУ', html: {class: 'bid_button'}
