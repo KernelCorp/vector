@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1> Поступила новая заявка на замер.</h1>
+<p>
+  Имя: <%= @bid.name %><br/>
+  Адрес: <%= @bid.address %><br/>
+  Телефон: <%= @bid.phone %><br/>
+  email: <%= @bid.email %><br/>
+  Дата: <%= (@bid.date) %><br/>
+  Время: <%= raw @bid.time %>
+</p>
+<p>
+  Дополнительная информация: <br/>
+  <%= (@bid.info) %><br/>
+</p>
+</body>
+</html>
