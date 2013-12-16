@@ -42,4 +42,6 @@
                   = link_to page.name, page, class: 'top_menu_text'
             #right_block_content
               = yield
+            = render partial: '/popover_bid'
     = render partial: '/footer'
+    #popover_background
