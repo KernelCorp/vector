@@ -1,6 +1,6 @@
 .lamps-wrapper
   - @lamps.each do |lamp|
-    .lamp-wrapper.light-on
+    .lamp-wrapper.light-off
       - if !lamp.light_off_file_name.blank? && !lamp.light_on_file_name.blank?
         - image_on = lamp.light_on
         - image_off = lamp.light_off
