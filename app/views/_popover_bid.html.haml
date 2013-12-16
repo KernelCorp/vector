@@ -1,5 +1,6 @@
 #popover_container
   #popover_block
+    #close_button
     = form_for Bid.new, remote: true, html: {class: 'inputs'} do |f|
       .input-wrap
         = f.text_field :name, type: 'text', placeholder: 'Ваше имя', class: 'important_field'
@@ -9,11 +10,20 @@
         = f.text_field :phone, type: 'text', placeholder: 'Ваш телефон', class: 'important_field'
       .input-wrap
         = f.text_field :email, type: 'text', placeholder: 'Ваш e-mail', class: 'important_field'
+      #for_label_2
+        = f.label 'Email введен некорректно.', class: 'validation_message_2'
       .input-wrap
         = f.text_field :date, type: 'text', placeholder: 'Дата замера', class: 'important_field'
       .input-wrap
         = f.text_field :time, type: 'text', placeholder: 'Удобное время', class: 'important_field'
       .input-wrap{class: 'input-field'}
         = f.text_area :info, type: 'text', placeholder: 'Дополнительная информация'
+      #for_label
+        = f.label 'Заполните все поля, пожалуйста.', class: 'validation_message'
       .button-wrap
         = f.submit class: 'submit_button', value: 'ОТПРАВИТЬ ЗАЯВКУ', html: {class: 'bid_button'}
+#popover_success
+  #popover_text
+    Ваша заявка принята!
+  .bid_button{id: 'bid_2'}
+    = link_to 'Превосходно!', "",  class: 'bid_button_text'
