@@ -12,19 +12,36 @@
       padding-left: 0px
       li
         margin-bottom: 10px
-    .ceiling-price
-      border-spacing: 0
-      tr:nth-child(2n+1)
-        td
-          border-right: 2px solid #d2aab2
-      tr:nth-child(2n), tr:first-child
-        td
-          border-right: 2px solid #e6d0d4
-      tr
-        td:last-child
-          border-right: none
-    .table_color_row
+
+.red
+  table
+    margin: 0 auto
+    border-spacing: 0
+    tr:nth-child(2n)
+      td
+        border-right: 2px solid #d2aab2
+    tr:nth-child(2n+1)
+      td
+        border-right: 2px solid #e6d0d4
+    tr
+      td:last-child
+        border-right: none
+    tr:nth-child(2n)
       background: #e6d0d4
+    tr
+      td
+        text-align: right
+        font:
+          family: Segoe UI
+          size: 14px
+          weight: normal
+      td:first-child
+        text-align: left
+    tr:first-child
+      td
+        text-align: center
+      td:first-child
+        text-align: left
 
     .floor-price
       border-spacing: 0
