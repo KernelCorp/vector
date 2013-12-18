@@ -483,30 +483,24 @@ qq.FileUploaderBasic.prototype = {
             parent = submit.parentNode.parentNode;
             if ( !globalOwner._options.params.name) {parent.getElementsByClassName('qq-image-name')[0].style.display = "none"}
             if ( !globalOwner._options.params.price) {parent.getElementsByClassName('qq-image-price')[0].style.display = "none"}
+            submit.addEventListener('click', function(){
+                parent = this.parentNode.parentNode;
+                if (globalOwner._options.params.name) {
+                    if (!validate_name(parent)){return false }
+                }
 
-                if (this._options.params.name || this._options.params.price){
-                submit.addEventListener('click', function(){
-                    parent = this.parentNode.parentNode;
-                    if (globalOwner._options.params.name) {
-                        if (!validate_name(parent)){return false }
-                    }
-
-                    if (globalOwner._options.params.price) {
-                        if (!validate_price(parent)){return false }
-                    }
+                if (globalOwner._options.params.price) {
+                    if (!validate_price(parent)){return false }
+                }
 
 
-                    if (parent.getElementsByClassName('error-message').length)
-                        parent.getElementsByClassName('error-message')[0].remove();
-                    upload_on_submit(parent)
+                if (parent.getElementsByClassName('error-message').length)
+                    parent.getElementsByClassName('error-message')[0].remove();
+                upload_on_submit(parent)
 
 
-                    return false;
-                });
-            } else {
-                parent = submit.parentNode.parentNode;
-                upload_on_submit(parent);
-            }
+                return false;
+            });
         }
 
     },      
