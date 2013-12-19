@@ -1,0 +1,16 @@
+#contacts-wrapper
+  %h2 Офис в Академгородке
+  .left-block
+    .item
+      = @contacts.address
+    .item
+      %span.item-title Прием заказов:
+      = @contacts.order_phone
+    .item
+      %span.item-title Монтажный отдел:
+      = @contacts.montage_phone
+    .item
+      %span.item-title Email:
+      = @contacts.email
+  .right-block
+    #map
