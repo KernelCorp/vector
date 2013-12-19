@@ -3,11 +3,13 @@ ready = ->
   init = ->
     myMap = new ymaps.Map "map", {
       center: [54.869554, 83.093585],
-      zoom: 16
+      zoom: 16,
+      behaviors: ['default', 'scrollZoom']
     }
     myPlacemark = new ymaps.Placemark([54.869554, 83.093585], {} ,{})
     myMap.geoObjects.add(myPlacemark)
-    myMap.controls.add('zoomControl');
+    myMap.controls.add('zoomControl', 'scrollZoom');
+    myMap.enableScrollZoom()
   if $('#map').length > 0
     ymaps.ready(init)
   return

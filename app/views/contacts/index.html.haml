@@ -13,13 +13,13 @@
       %span
         Email:
     .item.item-content
-      %span
+      %a{href: "tel: #{@contacts.order_phone}"}
         = @contacts.order_phone
       %br
-      %span
+      %a{href: "tel: #{@contacts.montage_phone}"}
         = @contacts.montage_phone
       %br
-      %span
+      %a{href: "mailto: #{@contacts.montage_phone}"}
         = @contacts.email
   .right-block
     #map
