@@ -5,6 +5,7 @@ class PopoverController
     $('#close_button').click @hide
     $('#bid_2').click @hide
     $('#new_bid').submit @on_submit
+    $('#bid_date').datepicker({autoSize: true})
     $('input').on 'input', ->
       if $(this).val() != ''
         if !$(this).is('#bid_email')
@@ -17,15 +18,18 @@ class PopoverController
         $(this).parent().removeClass('input_error')
         $('.validation_message_2').hide()
       return
+
   show: ->
     $('#popover_container').show()
     $('#popover_background').show()
     return false
+
   hide: ->
     $('#popover_container').hide()
     $('#popover_background').hide()
     $('#popover_success').hide()
     return false
+
   validate: ->
     error_indicator = true
     for input in $('.important_field')
@@ -38,6 +42,7 @@ class PopoverController
       error_indicator = false
       $('.validation_message_2').show()
     return error_indicator
+
   on_submit: =>
     $('.input_error').removeClass('input_error')
     if !@validate()
