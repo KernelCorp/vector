@@ -3,21 +3,30 @@
     #close_button
     = form_for Bid.new, remote: true, html: {class: 'inputs'} do |f|
       .input-wrap
-        = f.text_field :name, type: 'text', placeholder: 'Ваше имя', class: 'important_field'
+        = f.label 'Ваше имя'
+        = f.text_field :name, type: 'text', class: 'important_field'
       .input-wrap
-        = f.text_field :address, type: 'text', placeholder: 'Ваш адрес', class: 'important_field'
+        = f.label 'Ваш адрес'
+        = f.text_field :address, type: 'text', class: 'important_field'
       .input-wrap
-        = f.text_field :phone, type: 'text', placeholder: 'Ваш телефон', class: 'important_field'
+        = f.label 'Ваш телефон'
+        = f.text_field :phone, type: 'text', class: 'important_field'
       .input-wrap
-        = f.text_field :email, type: 'text', placeholder: 'Ваш e-mail', class: 'important_field'
+        = f.label 'Ваш e-mail'
+        = f.text_field :email, type: 'text', class: 'important_field'
       #for_label_2
         = f.label 'Email введен некорректно.', class: 'validation_message_2'
       .input-wrap
-        = f.text_field :date, type: 'text', placeholder: 'Дата замера', class: 'important_field'
+        = f.label 'Дата замера'
+        = f.text_field :date, type: 'text', class: 'important_field with-calendar'
+        .calendar
+          %img{src: '/images/calendar.png'}
       .input-wrap
-        = f.text_field :time, type: 'text', placeholder: 'Удобное время', class: 'important_field'
+        = f.label 'Удобное время'
+        = f.text_field :time, type: 'text', class: 'important_field'
       .input-wrap{class: 'input-field'}
-        = f.text_area :info, type: 'text', placeholder: 'Дополнительная информация'
+        = f.label 'Дополнительная информация'
+        = f.text_area :info, type: 'text'
       #for_label
         = f.label 'Заполните все поля, пожалуйста.', class: 'validation_message'
       .button-wrap

@@ -5,6 +5,7 @@
     animation-name: blink;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+		text-transform: uppercase;
 }
 
 .red #top_menu_item_4.active_item{
@@ -19,7 +20,7 @@
   }
 
   50%{
-      background: #c38194;
+      background: #aba00a;
   }
 
   100%{
@@ -32,7 +33,7 @@
     }
 
     50%{
-        background: #c38194;
+        background: #aba00a;
     }
 
     100%{

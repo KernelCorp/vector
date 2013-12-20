@@ -36,7 +36,7 @@ GEM
     activeadmin_images (0.2.0)
       activeadmin
       rails (~> 3.2.13)
-    activeadmin_tinymce (0.1.4)
+    activeadmin_tinymce (0.1.5)
       activeadmin
       rails (~> 3.2.13)
       slim-rails (~> 2.0.3)
@@ -181,7 +181,7 @@ GEM
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     raindrops (0.12.0)
-    rake (10.1.0)
+    rake (10.1.1)
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
@@ -191,7 +191,7 @@ GEM
       i18n (>= 0.5.0)
     rvm-capistrano (1.5.1)
       capistrano (~> 2.15.4)
-    sass (3.2.12)
+    sass (3.2.13)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -204,7 +204,7 @@ GEM
       activesupport (>= 3.0, < 4.1)
       railties (>= 3.0, < 4.1)
       slim (~> 2.0)
-    sprockets (2.2.1)
+    sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -222,10 +222,10 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.0.0)
+    turbolinks (2.1.0)
       coffee-rails
     tzinfo (0.3.38)
-    uglifier (2.3.3)
+    uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicorn (4.7.0)
