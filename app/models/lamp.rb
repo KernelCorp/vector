@@ -32,6 +32,9 @@ class Lamp < ActiveRecord::Base
       name_off = SecureRandom.uuid
     end until Lamp.where(light_off_file_name: name_off).empty?
 
+    name_on = name_on+ '.png'
+    name_off = name_off+ '.png'
+
     self.light_on.instance_write(:file_name, name_on)
     self.light_off.instance_write(:file_name, name_off)
 

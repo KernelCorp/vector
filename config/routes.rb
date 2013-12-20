@@ -15,6 +15,7 @@ Vector::Application.routes.draw do
   resources :categories, only: [:show]
 
   resources :bids, only: [:create]
+  resources :contacts, only: [:index]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

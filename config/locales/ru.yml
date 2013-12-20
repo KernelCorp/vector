@@ -56,7 +56,12 @@ ru:
         few: "Гаммы потолков"
         many: "Гаммы потолков"
         other: "Гамм потолков"
-
+      bid:
+        zero: "Заявок"
+        one: "Заявка"
+        few: "Заявки"
+        many: "Заявки"
+        other: "Заявок"
 
     attributes:
       admin_user:
@@ -99,6 +104,16 @@ ru:
       ceiling_spectrum:
         name: "Название"
         colors: "Цвета"
+      bid:
+        name: "Имя"
+        address: "Адрес"
+        phone: "Телефон"
+        email: "e-mail"
+        date: "Дата"
+        time: "Время"
+        info: "Дополнительная информация"
+        created_at: "Заявка подана"
+        updated_at: "Заявка обновлена"
 
   devise:
     failure:

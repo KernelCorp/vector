@@ -1,0 +1,29 @@
+#contacts-wrapper
+  %h2 Офис в Академгородке:
+  .left-block
+    .item.address
+      = @contacts.address
+    .item.item-title
+      %span
+        Прием заказов:
+      %br
+      %span
+        Монтажный отдел:
+      %br
+      %span
+        Email:
+    .item.item-content
+      %a{href: "tel: #{@contacts.order_phone}"}
+        = @contacts.order_phone
+      %br
+      %a{href: "tel: #{@contacts.montage_phone}"}
+        = @contacts.montage_phone
+      %br
+      %a{href: "mailto: #{@contacts.montage_phone}"}
+        = @contacts.email
+  .right-block
+    #map
+  .bid_button.with-text-warning
+    %a{href: '/'}
+    .bid_button_text
+      ОСТАВИТЬ ЗАЯВКУ НА ЗАМЕР

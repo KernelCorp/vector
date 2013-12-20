@@ -8,14 +8,14 @@
 <p>
   Имя: <%= @bid.name %><br/>
   Адрес: <%= @bid.address %><br/>
-  Телефон: <%= @bid.phone %><br/>
+  Телефон: <%= link_to @bid.phone, 'tel:' + @bid.phone %> <br/>
   email: <%= @bid.email %><br/>
   Дата: <%= (@bid.date) %><br/>
   Время: <%= raw @bid.time %>
 </p>
 <p>
   Дополнительная информация: <br/>
-  <%= (@bid.info) %><br/>
+  <%= (@bid.info) %>
 </p>
 </body>
 </html>
