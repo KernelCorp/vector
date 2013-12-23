@@ -34,10 +34,12 @@ class Lamp < ActiveRecord::Base
 
     name_on = name_on+ '.png'
     name_off = name_off+ '.png'
-
-    self.light_on.instance_write(:file_name, name_on)
-    self.light_off.instance_write(:file_name, name_off)
-
+    if !self.light_on_file_name.nil?
+      self.light_on.instance_write(:file_name, name_on)
+    end
+    if !self.light_off_file_name.nil?
+      self.light_off.instance_write(:file_name, name_off)
+    end
   end
 
 end

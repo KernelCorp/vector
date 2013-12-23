@@ -18,10 +18,16 @@ class PopoverController
         $(this).parent().removeClass('input_error')
         $('.validation_message_2').hide()
       return
+    $('.calendar img').click @focus_to_date_field
 
   show: ->
     $('#popover_container').show()
     $('#popover_background').show()
+    $('.input-wrap input').val("")
+    $('.input-wrap textarea').val("")
+    $('.input_error').removeClass('input_error')
+    $('.validation_message').hide()
+    $('.validation_message_2').hide()
     return false
 
   hide: ->
@@ -51,6 +57,10 @@ class PopoverController
     $('#popover_background').show()
     $('#popover_success').show()
     return true
+
+  focus_to_date_field: ()->
+    $('.with-calendar').trigger('focus')
+    return
 
 ready = ->
   if $('.bid_button').length > 0

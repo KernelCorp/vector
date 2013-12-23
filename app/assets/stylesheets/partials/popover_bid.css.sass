@@ -14,7 +14,7 @@
   position: absolute
   top: 60px
   left: 30px
-  width: 310px
+  width: 370px
   height: auto
   border-radius: 5px
   font-size: 14px
@@ -25,23 +25,44 @@
     position: relative
     margin: 10px 0
     .input_error
-      border: 1px solid red
+      input.important_field
+        border: 1px solid red
     .input-wrap
-      width: 250px
+      //width: 250px
       height: 20px
       margin: 20px auto 0 auto
+      position: relative
+      label
+        background-color: #ffffff
+        display: inline-block
+        width: 100px
+        margin-left: 10px
       input, textarea
         float: right
         width: 230px
         height: 18px
         border: none
         outline: none
+        margin-right: 10px
       textarea
         resize: none
         height: 76px
         font:
           family: Segoe UI
           size: 14px
+      input.with-calendar
+        width: 200px
+        margin-right: 40px
+        position: relative
+      .calendar
+        content: ""
+        position: absolute
+        img
+          width: 20px
+          height: 20px
+          cursor: pointer
+        top: 0
+        right: 10px
     .input-field
       height: 80px
     .button-wrap
@@ -71,17 +92,15 @@
       width: 275px
       height: 35px
       border-radius: 20px
-      align: right
-      margin-left: auto
-      margin-right: 5px
+      margin: auto
       border: none
-      margin-left: 18px
       outline: none
       font:
         family: Segoe UI
         weight: bold
         size: 16px
       color: #ffffff
+      display: block
 
 #popover_success
   z-index: 1001
