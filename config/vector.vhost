@@ -4,7 +4,7 @@ server unix:/var/www/vector/shared/unicorn.sock fail_timeout=0;
 
 server {
   listen 80;
-  server_name vektor.kerweb.ru www.vektor.kerweb.ru;
+  server_name vektor-nsk.com www.vektor-nsk.com;
   client_max_body_size 1G;
 
   keepalive_timeout 5;
