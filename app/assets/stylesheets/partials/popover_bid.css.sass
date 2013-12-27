@@ -14,10 +14,10 @@
   position: absolute
   top: 60px
   left: 30px
-  width: 370px
+  width: 390px
   height: auto
   border-radius: 5px
-  font-size: 14px
+  font-size: 15px
   color: #6c6c6c
   background: #ffffff
 
@@ -40,16 +40,20 @@
       input, textarea
         float: right
         width: 230px
-        height: 18px
+        height: 30px
         border: none
         outline: none
         margin-right: 10px
       textarea
+        width: 226px
         resize: none
         height: 76px
         font:
           family: Segoe UI
           size: 14px
+      label
+        sup
+          color: red
       input.with-calendar
         width: 200px
         margin-right: 40px
@@ -58,8 +62,9 @@
         content: ""
         position: absolute
         img
-          width: 20px
-          height: 20px
+          margin-top: 2px
+          width: 25px
+          height: 25px
           cursor: pointer
         top: 0
         right: 10px
@@ -121,7 +126,7 @@
     margin: 0 auto
 
 #for_label_2
-  position: absolute
+  margin-top: 20px
 #for_label
   margin: 10px auto
 .validation_message, .validation_message_2
@@ -134,3 +139,5 @@
 
 div.ui-datepicker
   font-size: 10px
+
+

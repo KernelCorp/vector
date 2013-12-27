@@ -14,7 +14,7 @@ class PopoverController
         $(this).parent().addClass('input_error')
       return
     $('#bid_email').on 'input', ->
-      if $(this).val().match /(\S)+[@](\S)+[.](\S)+/
+      if $(this).val() == '' || $(this).val().match /(\S)+[@](\S)+[.](\S)+/
         $(this).parent().removeClass('input_error')
         $('.validation_message_2').hide()
       return
@@ -43,7 +43,7 @@ class PopoverController
         $(input).parent().addClass 'input_error'
         $('.validation_message').show()
         error_indicator = false
-    if !$('#bid_email').val().match /(\S)+[@](\S)+[.](\S)+/
+    if $('#bid_email').val() != '' && !$('#bid_email').val().match /(\S)+[@](\S)+[.](\S)+/
       $('#bid_email').parent().addClass 'input_error'
       error_indicator = false
       $('.validation_message_2').show()

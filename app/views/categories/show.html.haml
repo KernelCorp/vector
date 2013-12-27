@@ -23,7 +23,8 @@
       .lamp-info
         %span.name
           = lamp.name
-        %span.price
-          = lamp.price
-          рублей
+        -if !lamp.price.blank?
+          %span.price
+            = lamp.price
+            рублей
 .footer_zone

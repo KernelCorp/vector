@@ -3,27 +3,31 @@
     #close_button
     = form_for Bid.new, remote: true, html: {class: 'inputs'} do |f|
       .input-wrap
-        = f.label 'Ваше имя'
+        = f.label :name do
+          = 'Ваше имя<sup>*</sup>'.html_safe
         = f.text_field :name, type: 'text', class: 'important_field'
       .input-wrap
-        = f.label 'Ваш адрес'
+        = f.label :address do
+          = 'Ваш адрес<sup>*</sup>'.html_safe
         = f.text_field :address, type: 'text', class: 'important_field'
       .input-wrap
-        = f.label 'Ваш телефон'
+        = f.label :phone do
+          = 'Ваш телефон<sup>*</sup>'.html_safe
         = f.text_field :phone, type: 'text', class: 'important_field'
       .input-wrap
         = f.label 'Ваш e-mail'
-        = f.text_field :email, type: 'text', class: 'important_field'
+        = f.text_field :email, type: 'text'
       #for_label_2
         = f.label 'Email введен некорректно.', class: 'validation_message_2'
       .input-wrap
-        = f.label 'Дата замера'
+        = f.label :date do
+          = 'Дата замера<sup>*</sup>'.html_safe
         = f.text_field :date, type: 'text', class: 'important_field with-calendar'
         .calendar
           %img{src: '/images/calendar.png'}
       .input-wrap
         = f.label 'Удобное время'
-        = f.text_field :time, type: 'text', class: 'important_field'
+        = f.text_field :time, type: 'text'
       .input-wrap{class: 'input-field'}
         = f.label 'Дополнительная информация'
         = f.text_area :info, type: 'text'

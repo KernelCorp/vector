@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
 
   before_filter :get_page
   def index
-    @contacts = Contacts.all.first
+    @contacts = Contacts.all
   end
 
   private

@@ -62,6 +62,12 @@ ru:
         few: "Заявки"
         many: "Заявки"
         other: "Заявок"
+      contacts:
+        zero: "Контактов"
+        one: "Страница котактов"
+        few: "Страницы контактов"
+        many: "Контакты"
+        other: "Контактов"
 
     attributes:
       admin_user:
@@ -114,6 +120,13 @@ ru:
         info: "Дополнительная информация"
         created_at: "Заявка подана"
         updated_at: "Заявка обновлена"
+      contacts:
+        name: "Местоположение"
+        address: "Адрес"
+        order_phone: "Прием заказов"
+        montage_phone: "Монтажный отдел"
+        created_at: "Создан"
+        updated_at: "Обновлен"
 
   devise:
     failure:

@@ -1,3 +1,3 @@
 class Contacts < ActiveRecord::Base
-  attr_accessible :address, :order_phone, :montage_phone, :email
+  attr_accessible :name, :address, :order_phone, :montage_phone, :email, :map_id
 end
