@@ -33,6 +33,7 @@ class PopoverController
     $('.input-wrap input').val("")
     $('.input-wrap textarea').val("")
     $('.input_error').removeClass('input_error')
+    $('.valid_submit').removeClass('valid_submit')
     $('.validation_message').hide()
     $('.validation_message_2').hide()
     return false
