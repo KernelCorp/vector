@@ -71,24 +71,7 @@
 	//box-shadow: inset -5px -15px 40px rgba(0, 0, 0, 0.1);
 	//background-image: -webkit-radial-gradient(35% 25%, closest-corner, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
 }
-.animate:nth-child(1) {
-	background-image: url("1.png");
-}
-.animate:nth-child(2) {
-	background-image: url("2.png");
-}
-.animate:nth-child(3) {
-	background-image: url("3.png");
-}
-.animate:nth-child(4) {
-	background-image: url("4.png");
-}
-.animate:nth-child(5) {
-	background-image: url("5.png");
-}
-.animate:nth-child(6) {
-	background-image: url("6.png");
-}
+
 section {
 	position: absolute;
 	width: 100%;
