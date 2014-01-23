@@ -25,10 +25,10 @@
         %br
         %a{href: "mailto: #{contacts.montage_phone}"}
           = contacts.email
-      - if i == @contacts.length
-        .bid_button.with-text-warning.animate#bid_1
-          %a{href: '/'}
-          .bid_button_text
-            ОСТАВИТЬ ЗАЯВКУ НА ЗАМЕР
+
+      .bid_button.with-text-warning.animate#bid_1
+        %a{href: '/'}
+        .bid_button_text
+          ОСТАВИТЬ ЗАЯВКУ НА ЗАМЕР
     .right-block
       %div{id: contacts.map_id}
