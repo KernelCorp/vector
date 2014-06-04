@@ -71,7 +71,7 @@ Vector::Application.configure do
       port:                  587,
       domain:               'vektor-nsk.com',
       user_name:            '1@vektor-nsk.com',
-      password:             'vektor123vektor',
+      password:             '123456',
       authentication:       'plain',
       enable_starttls_auto:  true  }
 end

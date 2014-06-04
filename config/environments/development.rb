@@ -35,14 +35,13 @@ Vector::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  #TODO: Ввести email отправителя с паролем.
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      address:              'smtp.gmail.com',
+      address:              'smtp.yandex.ru',
       port:                  587,
-      domain:               'gmail.com',
-      user_name:            '@gmail.com',
-      password:             '',
+      domain:               'vektor-nsk.com',
+      user_name:            '1@vektor-nsk.com',
+      password:             '123456',
       authentication:       'plain',
       enable_starttls_auto:  true  }
 
